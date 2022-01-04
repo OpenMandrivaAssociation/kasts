@@ -2,7 +2,7 @@
 #define commit cc1ac2452e41873741c8b5f3fcafa29ae3ce5a30
 
 Name:		kasts
-Version:	21.08
+Version:	21.12
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Podcast application for Plasma Mobile
 %if 0%{?snapshot}
@@ -53,3 +53,5 @@ Podcast application for Plasma Mobile
 %{_datadir}/applications/org.kde.kasts.desktop
 %{_datadir}/icons/hicolor/scalable/apps/kasts.svg
 %{_datadir}/metainfo/org.kde.kasts.appdata.xml
+%{_libdir}/libKastsSolidExtras.so
+%{_libdir}/qt5/qml/org/kde/kasts
