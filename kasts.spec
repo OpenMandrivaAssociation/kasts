@@ -33,6 +33,7 @@ BuildRequires:	cmake(KF5Kirigami2)
 BuildRequires:	cmake(OpenSSL)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5DBus)
+BuildRequires:	pkgconfig(taglib)
 
 %description
 Podcast application for Plasma Mobile
