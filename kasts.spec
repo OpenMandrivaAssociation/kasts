@@ -2,7 +2,7 @@
 #define commit cc1ac2452e41873741c8b5f3fcafa29ae3ce5a30
 
 Name:		kasts
-Version:	21.12
+Version:	22.02
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Podcast application for Plasma Mobile
 %if 0%{?snapshot}
