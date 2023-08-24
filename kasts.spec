@@ -1,14 +1,15 @@
-#define snapshot 20200916
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+#define git 20200916
 #define commit cc1ac2452e41873741c8b5f3fcafa29ae3ce5a30
 
 Name:		kasts
-Version:	22.11
-Release:	%{?snapshot:1.%{snapshot}.}1
+Version:	23.08.0
+Release:	%{?git:0.%{git}.}1
 Summary:	Podcast application for Plasma Mobile
-%if 0%{?snapshot}
-Source0:	https://invent.kde.org/plasma-mobile/kasts/-/archive/v%{version}/kasts-v%{version}.tar.bz2
+%if 0%{?git:1}
+Source0:        https://invent.kde.org/plasma-mobile/%{name}/-/archive/master/%{name}-master.tar.bz2
 %else
-Source0:	https://download.kde.org/stable/plasma-mobile/%{version}/%{name}-%{version}.tar.xz
+Source0:        http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 %endif
 License:	GPLv3
 Group:		Applications/Productivity
@@ -55,7 +56,10 @@ Podcast application for Plasma Mobile
 %files -f kasts.lang
 %{_bindir}/kasts
 %{_datadir}/applications/org.kde.kasts.desktop
-%{_datadir}/icons/hicolor/scalable/apps/kasts.svg
 %{_datadir}/metainfo/org.kde.kasts.appdata.xml
 %{_libdir}/libKastsSolidExtras.so
 %{_libdir}/qt5/qml/org/kde/kasts
+%{_libdir}/libKMediaSession.so
+%{_libdir}/qt5/qml/org/kde/kmediasession/libkmediasession-qmlplugin.so
+%{_libdir}/qt5/qml/org/kde/kmediasession/qmldir
+%{_datadir}/icons/hicolor/*/*/*
