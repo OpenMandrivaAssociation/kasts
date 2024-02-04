@@ -3,8 +3,8 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		plasma6-kasts
-Version:	24.01.90
-Release:	%{?git:0.%{git}.}2
+Version:	24.01.95
+Release:	%{?git:0.%{git}.}1
 Summary:	Podcast application for Plasma Mobile
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/plasma-mobile/%{name}/-/archive/master/%{name}-master.tar.bz2
