@@ -6,7 +6,7 @@
 
 Name:		plasma6-kasts
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Summary:	Podcast application primarily for Plasma Mobile
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/multimedia/kasts/-/archive/%{gitbranch}/kasts-%{gitbranchd}.tar.bz2
