@@ -4,7 +4,7 @@
 
 Name:		kasts
 Version:	23.08.4
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 Summary:	Podcast application for Plasma Mobile
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/plasma-mobile/%{name}/-/archive/master/%{name}-master.tar.bz2
