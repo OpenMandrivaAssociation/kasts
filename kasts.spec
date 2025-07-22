@@ -5,7 +5,7 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		kasts
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Summary:	Podcast application primarily for Plasma Mobile
 %if 0%{?git:1}
@@ -15,8 +15,6 @@ Source0:        http://download.kde.org/%{stable}/release-service/%{version}/src
 %endif
 License:	GPLv3
 Group:		Applications/Productivity
-BuildRequires:	cmake
-BuildRequires:	ninja
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	cmake(ECM)
@@ -44,23 +42,15 @@ BuildRequires:	pkgconfig(taglib)
 BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(Qt6Keychain)
 
+%rename plasma6-kasts
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Podcast application for Plasma Mobile
 
-%prep
-%autosetup -p1 -n kasts-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja -G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang kasts
-
-%files -f kasts.lang
+%files -f %{name}.lang
 %{_bindir}/kasts
 %{_datadir}/applications/org.kde.kasts.desktop
 %{_datadir}/metainfo/org.kde.kasts.appdata.xml
