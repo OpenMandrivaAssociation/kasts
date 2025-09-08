@@ -46,6 +46,7 @@ BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(Qt6Keychain)
+BuildRequires:	cmake(Qt6QmlAssetDownloader)
 
 %rename plasma6-kasts
 
