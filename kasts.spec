@@ -59,6 +59,9 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 %description
 Podcast application for Plasma Mobile
 
+%patchlist
+kasts-25.08.2-fix-build-without-gstreamer.patch
+
 %files -f %{name}.lang
 %{_bindir}/kasts
 %{_datadir}/applications/org.kde.kasts.desktop
