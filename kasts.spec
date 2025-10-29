@@ -44,10 +44,12 @@ BuildRequires:	cmake(OpenSSL)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(libvlc)
 BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(Qt6Keychain)
 BuildRequires:	cmake(Qt6QmlAssetDownloader)
 BuildRequires:	cmake(Qt6ExamplesAssetDownloaderPrivate)
+BuildRequires:	cmake(VulkanHeaders)
 
 %rename plasma6-kasts
 
