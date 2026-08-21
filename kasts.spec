@@ -5,7 +5,7 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		kasts
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 Summary:	Podcast application primarily for Plasma Mobile
 %if 0%{?git:1}
@@ -57,9 +57,6 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Podcast application for Plasma Mobile
-
-%patchlist
-kasts-25.08.2-fix-build-without-gstreamer.patch
 
 %files -f %{name}.lang
 %{_bindir}/kasts
