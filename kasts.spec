@@ -47,7 +47,6 @@ BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(libvlc)
 BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:	cmake(Qt6Keychain)
-BuildRequires:	cmake(Qt6QmlAssetDownloader)
 BuildRequires:	cmake(VulkanHeaders)
 
 %rename plasma6-kasts
