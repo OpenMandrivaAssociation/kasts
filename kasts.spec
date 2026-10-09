@@ -5,8 +5,8 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		kasts
-Version:	26.08.1
-Release:	%{?git:0.%{git}.}2
+Version:	26.08.2
+Release:	%{?git:0.%{git}.}1
 Summary:	Podcast application primarily for Plasma Mobile
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/multimedia/kasts/-/archive/%{gitbranch}/kasts-%{gitbranchd}.tar.bz2
